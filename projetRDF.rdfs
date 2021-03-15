@@ -1,0 +1,94 @@
+<rdf:RDF>
+
+<rdf:RDFxmlns:rdf ="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+<rdfs:Class rdf:ID="Person">
+    <rdfs:label xml:lang="en">person</rdfs:label>
+    <rdfs:label xml:lang="en">human being</rdfs:label>
+    <rdfs:label xml:lang="en">human</rdfs:label>
+    <rdfs:comment xml:lang="en">a member of the human species</rdfs:comment>
+    <rdfs:label xml:lang="fr">personne</rdfs:label>
+    <rdfs:label xml:lang="fr">etre humain</rdfs:label>
+    <rdfs:label xml:lang="fr">humain</rdfs:label>
+    <rdfs:label xml:lang="fr">homme</rdfs:label>
+    <rdfs:comment xml:lang="fr">un membre de l’espece humaine.</rdfs:comment>
+</rdfs:Class>
+
+<rdfs:Class rdf:ID = "Artist">
+    <subClassOf rdf:resource="#Person"/>
+</rdfs:Class>
+
+<rdfs:Class rdf:ID="Actor">
+    <rdfs:subClassOf rdf:resource="#Artist"/>
+    <rdfs:label xml:lang="en">actor</rdfs:label>
+    <rdfs:comment xml:lang="en">a person who portrays a character ina performance</rdfs:comment>
+    <rdfs:label xml:lang="fr">acteur</rdfs:label>
+    <rdfs:comment xml:lang="fr">une personne qui joue un role dans unspectacle</rdfs:comment>
+</rdfs:Class>
+
+<rdfs:Property rdf:ID="surname">
+    <rdfs:label xml:lang="en">last name</rdfs:label>
+    <rdfs:label xml:lang="fr">nom</rdfs:label>
+    <rdfs:comment xml:lang="en">last name of a person</rdfs:comment>
+    <rdfs:comment xml:lang="fr">nom de famille d’une personne</rdfs:comment>
+</rdfs:Property>
+
+<rdfs:Class rdf:ID="Film">
+    <rdfs:label xml:lang = "fr">film</rdfs:label>
+</rdf:Class>
+
+
+<rdf:Property rdf:ID="Genre">
+    <rdfs:comment xml:lang="fr">le genre du film </rdfs:label>
+    <domain rdfs:resource = "#Film"/>
+    <range rdfs:datatype = "&xsd;string"/>
+</rdf:Property>
+
+<rdf:Property rdf:ID="Pays">
+    <rdfs:comment xml:lang="fr">un nom de pays </rdfs:comment>
+    <domain rdfs:resource = "#Person"/>
+    <range rdfs:datatype = "&xsd;string" />
+</rdf:Property>
+
+<rdf:Class rdf:ID="MetteurEnScene">
+    <subClassOf rdf:resource="#Artist"/>
+</rdfs:Class>
+
+
+
+<rdf:Class rdf:ID="Roles">
+    <rdfs:comment xml:lang = "fr">le role d'un acteur selon un film</rdfs:comment>
+</rdf:Class>
+
+<rdf:Property rdf:ID="Resume">
+    <rdfs:comment xml:lang = "fr">Le resume d'un film </rdfs:comment>
+    <domain rdf:resource = "#Film"/>
+    <range rdf:datatype = "&xsd;string"/>
+</rdf:Property>
+
+<rdf:Property rdf:ID="Titre">
+    <domain rdf:resource= "#Film"/>
+    <range rdf:datatype = "&xsd;string"/>
+</rdf:Property>
+
+<rdf:Property rdf:ID = "Annee">
+    <domain rdf:resource = "#Film"/>
+    <range rdf:datatype = "&xsd;integer"/>
+</rdf:Property>
+
+
+<rdf:Property rdf:ID="hasRole">
+    <rdfs:comment xml:lang = "fr"> lien entre un film et un role </rdfs:comment>
+    <domain rdf:resource = "#Film"/>
+    <range rdf:resource = "#Role"/>
+</rdf:Property>
+
+<rdf:Property rdf:ID="description">
+    <rdfs:comment xml:lang = "fr"> decrit le role </rdfs:comment>
+    <domain rdf:resource = "#Role"/>
+    <range rdf:datatype = "#&xsd;string"/>
+</rdf:Property>
+
+</rdf:RDF>

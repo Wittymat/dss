@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+   <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#"> ]
+>
+ 
+<rdf:RDF  
+   xmlns:rdf ="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:xsd ="&xsd;" 
+>
+   
+
+
+<!--
+    Les metteurs en scene
+-->
+ 
+
+<MetteurEnScene rdf:ID="Juliette">
+    <surname>juliette</surname>
+    <pays> Espagne </pays>
+</MetteurEnScene>
+
+<MetteurEnScene rdf:ID="Mark">
+    <surname>mark</surname>
+    <pays> USA </pays>
+</MetteurEnScene>
+
+<!-- 
+    Les acteurs
+-->
+ 
+<Actor rdf:ID="Eve">
+    <surname>eve</surname>
+    <pays> France </pays>
+</Actor>
+ 
+<Actor rdf:ID="David">
+    <surname>eve</surname>
+    <pays> Allemagne </pays>
+
+</Actor>
+    
+<Actor rdf:ID="John">
+  <surname>John</surname>
+<pays> Canada </pays>
+</Actor>
+     
+<Actor rdf:ID="Harry">
+  <surname>harry</surname>
+  <pays> Angleterre </pays>
+
+</Actor>
+
+<Actor rdf:ID="BruceWillis">
+    <surname>Bruce Willis</surname>
+    <pays> USA </pays>
+
+</Actor>
+
+<!-- 
+    Les films
+-->
+
+<Film rdf:ID = "Alien">
+
+    <resume>Film avec des monstres</resume>
+    <annee>1967</annee>
+    <titre>Alien</titre>
+    <hasMetteurEnScene rdf:resource = "#Mark"/>
+    <hasRole rdf:resource = "#BruceAlien"/>
+    <hasRole rdf:resource = "#DavidAlien"/>
+    
+</Film>
+
+<Film rdf:ID = "AmeliePoulain">
+
+    <resume>Film de paris</resume>
+    <annee>2001</annee>
+    <titre>Amelie Poulain</titre>
+    <hasRole rdf:resource = "EveAmelie"/>
+    <hasRole rdf:resource = "JohnAmelie"/>
+    <hasMetteurEnScene rdf:resource="#Juliette"/>
+    
+</Film>
+
+<Film rdf:ID = "Hommes12">
+
+    <resume>Film de tribunal</resume>
+    <annee>1950</annee>
+    <titre>12 hommes pas contents</titre>
+    <hasMetteurEnScene rdf:resource = "#Mark" />
+    <acteur rdf:resource = "Harry"/>
+    <acteur rdf:resource = "John"/>
+
+    <hasRole rdf:resource = "#Harry12"/>
+    <hasRole rdf:resource = "#John12" />
+
+    
+</Film>
+
+<!-- 
+    Les roles
+-->
+
+<Role rdf:ID = "BruceAlien">
+    <artist rdf:resource = "#BruceWillis"/>
+    <film rdf:resource = "Alien"/>
+    <description> Personnage principal </description>
+</Role>
+
+<Role rdf:ID = "DavidAlien">
+    <artist rdf:resource = "#David"/>
+    <film rdf:resource = "Alien"/>
+    <description> Personnage secondaire </description>
+</Role>
+
+<Role rdf:ID = "EveAmelie">
+    <artist rdf:resource = "#Eve"/>
+    <film rdf:resource = "#AmeliePoulain"/>
+    <description> Personnage principal </description>
+</Role>
+
+<Role rdf:ID = "JohnAmelie">
+    <artist rdf:resource = "#John"/>
+    <film rdf:resource = "AmeliePoulain"/>
+    <description> Personnage secondaire </description>
+</Role>
+
+<Role rdf:ID = "Harry12">
+    <artist rdf:resource = "#Harry"/>
+    <film rdf:resource = "Hommes12"/>
+    <description> Personnage principal </description>
+</Role>
+
+<Role rdf:ID = "John12">
+    <artist rdf:resource = "#John"/>
+    <film rdf:resource = "Hommes12"/>
+    <description> Personnage secondaire </description>
+</Role>
+ 
+ 
+</rdf:RDF>

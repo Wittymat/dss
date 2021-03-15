@@ -1,0 +1,13 @@
+PREFIX humans: <http://humans/#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX mark: <http://humans/-instances#Mark>
+
+
+SELECT ?x
+WHERE
+{
+
+	mark: rdf:type rdf:type
+	FILTER(xsd:integer(?age)< 18)
+}

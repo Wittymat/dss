@@ -1,0 +1,86 @@
+@prefix ns1: <file:///Users/swarm/Documents/COURS/dss/> .
+
+<file:///Users/swarm/Documents/COURS/dss/documentprojet.rdf#Alien> a ns1:Film ;
+    ns1:annee "1967" ;
+    ns1:hasMetteurEnScene <file:///Users/swarm/Documents/COURS/dss/documentprojet.rdf#Mark> ;
+    ns1:hasRole <file:///Users/swarm/Documents/COURS/dss/documentprojet.rdf#BruceAlien>,
+        <file:///Users/swarm/Documents/COURS/dss/documentprojet.rdf#DavidAlien> ;
+    ns1:resume "Film avec des monstres" ;
+    ns1:titre "Alien" .
+
+<file:///Users/swarm/Documents/COURS/dss/documentprojet.rdf#EveAmelie> a ns1:Role ;
+    ns1:artist <file:///Users/swarm/Documents/COURS/dss/documentprojet.rdf#Eve> ;
+    ns1:description " Personnage principal " ;
+    ns1:film <file:///Users/swarm/Documents/COURS/dss/documentprojet.rdf#AmeliePoulain> .
+
+<file:///Users/swarm/Documents/COURS/dss/documentprojet.rdf#Hommes12> a ns1:Film ;
+    ns1:acteur ns1:Harry,
+        ns1:John ;
+    ns1:annee "1950" ;
+    ns1:hasMetteurEnScene <file:///Users/swarm/Documents/COURS/dss/documentprojet.rdf#Mark> ;
+    ns1:hasRole <file:///Users/swarm/Documents/COURS/dss/documentprojet.rdf#Harry12>,
+        <file:///Users/swarm/Documents/COURS/dss/documentprojet.rdf#John12> ;
+    ns1:resume "Film de tribunal" ;
+    ns1:titre "12 hommes pas contents" .
+
+<file:///Users/swarm/Documents/COURS/dss/documentprojet.rdf#JohnAmelie> a ns1:Role ;
+    ns1:artist <file:///Users/swarm/Documents/COURS/dss/documentprojet.rdf#John> ;
+    ns1:description " Personnage secondaire " ;
+    ns1:film ns1:AmeliePoulain .
+
+<file:///Users/swarm/Documents/COURS/dss/documentprojet.rdf#AmeliePoulain> a ns1:Film ;
+    ns1:annee "2001" ;
+    ns1:hasMetteurEnScene <file:///Users/swarm/Documents/COURS/dss/documentprojet.rdf#Juliette> ;
+    ns1:hasRole ns1:EveAmelie,
+        ns1:JohnAmelie ;
+    ns1:resume "Film de paris" ;
+    ns1:titre "Amelie Poulain" .
+
+<file:///Users/swarm/Documents/COURS/dss/documentprojet.rdf#BruceAlien> a ns1:Role ;
+    ns1:artist <file:///Users/swarm/Documents/COURS/dss/documentprojet.rdf#BruceWillis> ;
+    ns1:description " Personnage principal " ;
+    ns1:film ns1:Alien .
+
+<file:///Users/swarm/Documents/COURS/dss/documentprojet.rdf#BruceWillis> a ns1:Actor ;
+    ns1:pays " USA " ;
+    ns1:surname "Bruce Willis" .
+
+<file:///Users/swarm/Documents/COURS/dss/documentprojet.rdf#David> a ns1:Actor ;
+    ns1:pays " Allemagne " ;
+    ns1:surname "eve" .
+
+<file:///Users/swarm/Documents/COURS/dss/documentprojet.rdf#DavidAlien> a ns1:Role ;
+    ns1:artist <file:///Users/swarm/Documents/COURS/dss/documentprojet.rdf#David> ;
+    ns1:description " Personnage secondaire " ;
+    ns1:film ns1:Alien .
+
+<file:///Users/swarm/Documents/COURS/dss/documentprojet.rdf#Eve> a ns1:Actor ;
+    ns1:pays " France " ;
+    ns1:surname "eve" .
+
+<file:///Users/swarm/Documents/COURS/dss/documentprojet.rdf#Harry> a ns1:Actor ;
+    ns1:pays " Angleterre " ;
+    ns1:surname "harry" .
+
+<file:///Users/swarm/Documents/COURS/dss/documentprojet.rdf#Harry12> a ns1:Role ;
+    ns1:artist <file:///Users/swarm/Documents/COURS/dss/documentprojet.rdf#Harry> ;
+    ns1:description " Personnage principal " ;
+    ns1:film ns1:Hommes12 .
+
+<file:///Users/swarm/Documents/COURS/dss/documentprojet.rdf#John12> a ns1:Role ;
+    ns1:artist <file:///Users/swarm/Documents/COURS/dss/documentprojet.rdf#John> ;
+    ns1:description " Personnage secondaire " ;
+    ns1:film ns1:Hommes12 .
+
+<file:///Users/swarm/Documents/COURS/dss/documentprojet.rdf#Juliette> a ns1:MetteurEnScene ;
+    ns1:pays " Espagne " ;
+    ns1:surname "juliette" .
+
+<file:///Users/swarm/Documents/COURS/dss/documentprojet.rdf#John> a ns1:Actor ;
+    ns1:pays " Canada " ;
+    ns1:surname "John" .
+
+<file:///Users/swarm/Documents/COURS/dss/documentprojet.rdf#Mark> a ns1:MetteurEnScene ;
+    ns1:pays " USA " ;
+    ns1:surname "mark" .
+
